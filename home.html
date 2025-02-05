@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Your Page Title</title>
+
+        <link rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <style>
+          .container-fluid1 {
+    background-image: url('movie.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 510px;
+    opacity: 0.9;
+    color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+
+  }
+  .container-fluid2{
+    padding: 30px 30px;
+    margin: 30px 30px;
+  }
+  .navbar{
+      opacity: 0.9;
+      background-image: url('movie.jpg');
+      width: 100%;
+      
+  }
+  .btn{
+    margin: 1px 10px;
+  }
+  .movies{
+  display: inline-block;
+  border-radius: 4px;
+  border: 2px solid black;
+  margin: 20px 20px;
+
+}
+.title{
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+.btn{
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+
+}
+.images img{
+  height: 250px;
+  width: 175px;
+}
+
+
+.btn button:hover{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+.nav-item:hover{
+  color: black;
+  background-color: black;
+  border-radius: 4px;
+}
+.container{
+  padding: 0px 294px;
+  margin: 0px 250px;
+}
+footer img{
+  width: 55px;
+  height: 55px;
+  padding: 10px 10px;
+  margin: 6px 3px;
+}
+header h1{
+  color: aqua;
+}.container-fluid1 {
+    background-image: url('movie.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 510px;
+    opacity: 0.9;
+    color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+  }
+  .container-fluid2{
+    padding: 30px 30px;
+    margin: 30px 30px;
+  }
+  .navbar{
+      opacity: 0.9;
+      background-image: url('movie.jpg');
+      width: 100%;   
+  }
+  .btn{
+    margin: 1px 10px;
+  }
+  .movies{
+  display: inline-block;
+  border-radius: 4px;
+  border: 2px solid black;
+  margin: 20px 20px;
+
+}
+.title{
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+.btn{
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+
+}
+.images img{
+  height: 250px;
+  width: 175px;
+}
+
+
+.btn button:hover{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+.nav-item:hover{
+  color: black;
+  background-color: black;
+  border-radius: 4px;
+}
+.container{
+  padding: 0px 294px;
+  margin: 0px 250px;
+}
+footer img{
+  width: 55px;
+  height: 55px;
+  padding: 10px 10px;
+  margin: 6px 3px;
+}
+header h1{
+  color: aqua;
+}
+.confirmation-message {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        z-index: 1000;
+    }
+    #bookingConfirmation{
+        color: #ff5733; /* Set your desired text color */
+        animation: colorChange 4s alternate infinite;
+    }
+
+    @keyframes colorChange {
+        from {
+            color: #ff5733; /* Start color */
+        }
+        to {
+            color: #33cc33; /* End color */
+        }
+    }
+        </style>
+        <title>CineMagic</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img src="logo.jpeg" alt="" class="rounded" width="50px" height="50px">
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Bookings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Help</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" tabindex="-1"
+                                aria-disabled="true">About Us</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav ml-auto">
+                        <button type="button" class="btn btn-success"
+                            data-toggle="modal" data-target="#loginModal">
+                            Log in
+                        </button>
+                        <button type="button" class="btn btn-success"
+                            data-toggle="modal" data-target="#SignupModal">
+                            Sign Up
+                        </button>
+
+                    </ul>
+
+                </div>
+            </nav>
+            <!--Login  Modal -->
+            <div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+                aria-labelledby="loginModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="loginModalLabel">Modal
+                                title</h5>
+                            <button type="button" class="close"
+                                data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="row g-3">
+                                <div class="col-md-4">
+                                    <label for="validationDefault01"
+                                        class="form-label">First name</label>
+                                    <input type="text" class="form-control"
+                                        id="validationDefault01" 
+                                        required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="validationDefault02"
+                                        class="form-label">Last name</label>
+                                    <input type="text" class="form-control"
+                                        id="validationDefault02" 
+                                        required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="validationDefaultUsername"
+                                        class="form-label">Username</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"
+                                            id="inputGroupPrepend2">@</span>
+                                        <input type="text" class="form-control"
+                                            id="validationDefaultUsername"
+                                            aria-describedby="inputGroupPrepend2"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="validationDefault03"
+                                        class="form-label">Phone Number</label>
+                                    <input type="number" class="form-control"
+                                        id="validationDefault03" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="validationDefault03"
+                                        class="form-label">Email</label>
+                                    <input type="text" class="form-control"
+                                        id="validationDefault03" required>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="validationDefault05"
+                                        class="form-label">Password</label>
+                                    <input type="text" class="form-control" type="password"
+                                        id="validationDefault05" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="validationDefault05"
+                                        class="form-label">Repassword</label>
+                                    <input type="text" class="form-control" type="password"
+                                        id="validationDefault05" required>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input"
+                                            type="checkbox" value
+                                            id="invalidCheck2" required>
+                                        <label class="form-check-label"
+                                            for="invalidCheck2">
+                                            Agree to terms and conditions
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary"
+                                data-dismiss="modal">Close</button>
+                            <button type="button" type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sign up Modal -->
+            <div class="modal fade" id="SignupModal" tabindex="-1" role="dialog"
+                aria-labelledby="SignupModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="SignupModalLabel">Modal
+                                title</h5>
+                            <button type="button" class="close"
+                                data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3 row">
+                                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                  <input type="text" readonly class="form-control-plaintext" id="staticEmail">
+                                </div>
+                              </div>
+                              <div class="mb-3 row">
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                                <div class="col-sm-10">
+                                  <input type="password" class="form-control" id="inputPassword">
+                                </div>
+                              </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary"
+                                data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Log In</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid1">
+
+                <div class="row-cols-1 align-self-center text-center">
+                    
+                    <h1 class="h-primary">Welcome to CineMagic </h1>
+                    <p>Here we are selling the movie tickets according to your
+                        location
+                        and which make easy to buy tickets
+                        and stops standing infront of the movie counters be
+                        smart use
+                        CineMagic.</p>
+                </div>
+
+            </div>
+
+            <div class="container-fluid2">
+
+                <div class="movies">
+                    <div class="images">
+                        <img src="open.jpg" alt>
+                    </div>
+                    <div class="title">
+                        OppenHeimer
+                    </div>
+                    <div class="btn">
+                        <button>Book Now</button>
+
+                    </div>
+                </div>
+
+                <div class="movies">
+                    <div class="images">
+                        <img src="inter.jpg" alt>
+                    </div>
+                    <div class="title">
+                        InterSteller
+                    </div>
+                    <div class="btn">
+                        <button>Book Now</button>
+
+                    </div>
+                </div>
+                <div class="movies">
+                    <div class="images">
+                        <img src="jawan.jpg" alt>
+                    </div>
+                    <div class="title">
+                        Jawan
+                    </div>
+                    <div class="btn">
+                        <button>Book Now</button>
+
+                    </div>
+                </div>
+                <div class="movies">
+                    <div class="images">
+                        <img src="og.jpg" alt>
+                    </div>
+                    <div class="title">
+                        OG
+                    </div>
+                    <div class="btn">
+                        <button>Book Now</button>
+
+                    </div>
+                </div>
+                <div class="movies">
+                    <div class="images">
+                        <img src="salaar.jpg" alt>
+                    </div>
+                    <div class="title">
+                        Salaar
+                    </div>
+                    <div class="btn">
+                        <button>Book Now</button>
+
+                    </div>
+                </div>
+                <div class="movies">
+                    <div class="images">
+                        <img src="game.jpg" alt>
+                    </div>
+                    <div class="title">
+                        The Imitation Game
+                    </div>
+                    <div class="btn">
+                        <button>Book Now</button>
+
+                    </div>
+                </div>
+                <div class="movies">
+                    <div class="images">
+                        <img src="gabbar.jpg" alt>
+                    </div>
+                    <div class="title">
+                        GabbarSingh
+                    </div>
+                    <div class="btn">
+                        <button>Book Now</button>
+
+                    </div>
+                </div>
+                <div class="movies">
+                    <div class="images">
+                        <img src="spider.jpg" alt>
+                    </div>
+                    <div class="title">
+                        SpiderMan Far From
+                    </div>
+                    <div class="btn">
+                        <button>Book Now</button>
+
+                    </div>
+                </div>
+                <div class="movies">
+                    <div class="images">
+                        <img src="war.jpg" alt>
+                    </div>
+                    <div class="title">
+                        Infinty War
+                    </div>
+                    <div class="btn">
+                        <button>Book Now</button>
+
+                    </div>
+                </div>
+                <div class="movies">
+                    <div class="images">
+                        <img src="dark.jpg" alt>
+                    </div>
+                    <div class="title">
+                        Dark Knight
+                    </div>
+                    <div class="btn">
+                        <button>Book Now</button>
+
+                    </div>
+                </div>
+                <div class="movies">
+                    <div class="images">
+                        <img src="stalin.jpg" alt>
+                    </div>
+                    <div class="title">
+                        Stalin
+                    </div>
+                    <div class="btn">
+                        <button>Book Now</button>
+
+                    </div>
+                </div>
+                <div class="movies">
+                    <div class="images">
+                        <img src="gamechanger.jpg" alt>
+                    </div>
+                    <div class="title">
+                        GameChanger
+                    </div>
+                    <div class="btn">
+                        <button>Book Now</button>
+
+                    </div>
+                </div>
+                <div class="movies">
+                    <div class="images">
+                        <img src="guntur.jpg" alt>
+                    </div>
+                    <div class="title">
+                        Guntur Karam
+                    </div>
+                    <div class="btn">
+                        <button>Book Now</button>
+
+                    </div>
+                </div>
+                <div class="movies">
+                    <div class="images">
+                        <img src="devara.jpg" alt>
+                    </div>
+                    <div class="title">
+                        Devara
+                    </div>
+                    <div class="btn">
+                        <button>Book Now</button>
+
+                    </div>
+                </div>
+                <div class="movies">
+                    <div class="images">
+                        <img src="war2.jpg" alt>
+                    </div>
+                    <div class="title">
+                        War
+                    </div>
+                    <div class="btn">
+                        <button>Book Now</button>
+
+                    </div>
+                </div>
+
+            </div>
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script
+                src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+            <script
+                src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+                <header class="border-bottom py-4 text-center">
+                    <h1>CineMagic.</h1>
+                  </header>
+                  
+                  <header class="border-bottom py-5 text-center">
+                    <h3>Follow Us On</h3>
+                  </header>
+                  
+                <footer class="bg-dark text-light d-flex align-items-center justify-content-center">
+                    
+                    <ul class="list-inline mb-0">
+                      <li class="list-inline-item"><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                      <li class="list-inline-item"><a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a></li>
+                      <li class="list-inline-item"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                      <li class="list-inline-item"><a href="https://web.telegram.org/k/"><i class="fab fa-telegram"></i></a></li>
+                      <!-- Add more social media icons as needed -->
+                    </ul>
+                  </footer>
+                  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+                  <script>
+                    $(document).ready(function() {
+                        $(".btn button").click(function() {
+                            var movieElement = $(this).closest(".movies");
+                            var movieTitle = movieElement.find(".title").text();
+                            movieElement.find(".title").css("color", "red");
+                            $("#bookingConfirmation h3").text("Your Ticket Was Booked For '" + movieTitle + "'.");
+                            $("#bookingConfirmation").fadeIn(100);
+                            $(".ThankYou").fadeIn(100);
+                            $(".container-fluid2").fadeOut(1000);
+                            $("nav").fadeOut(1000);
+                            $(".h-primary").fadeOut(1000);
+                            $("#navbar").fadeOut(1000);
+                            setTimeout(function() {
+                                $("#bookingConfirmation").fadeOut(function() {
+                                    $(".container-fluid2").fadeIn(1000);
+                                    $(".h-primary").fadeIn(1000);
+                                    $("#hloo").fadeIn(1000);
+                                    $("nav").fadeIn(1000);
+                                    movieElement.find(".title").css("color", "");
+                                });
+                            }, 4000);
+                        });
+                    });
+                </script>
+                <div id="THANK">
+            <h1>Thank You For Choosing CineMagic</h1>
+        </div>
+        <div id="bookingConfirmation" class="confirmation-message">
+            <h3>YOUR TICKET WAS BOOKED</h3>
+        </div>
+                  
+                  
+
+                
+                  
+
+        </body>
+    </html>
